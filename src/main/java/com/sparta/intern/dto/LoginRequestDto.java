@@ -3,11 +3,9 @@ package com.sparta.intern.dto;
 import lombok.Getter;
 
 @Getter
-public class SignUpRequestDto {
+public class LoginRequestDto {
 
   private String username;
 
   private String password;
-
-  private String nickname;
 }

@@ -17,7 +17,7 @@ public class User {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private String id;
+  private Long id;
 
   private String username;
 
@@ -30,6 +30,9 @@ public class User {
 
   private String refreshToken;
 
+  @Enumerated(EnumType.STRING)
+  private UserStatusEnum userStatusEnum;
+
   @Builder
   public User(String username, String nickname, String password){
     this.username = username;
@@ -37,4 +40,14 @@ public class User {
     this.password = password;
     this.authorities = UserAuthorities.ROLE_USER;
   }
+
+  public void login(String username, String password){
+
+  }
+
+  public void saveRefreshToken(String refreshToken) {
+    this.refreshToken = refreshToken;
+  }
+
+
 }
