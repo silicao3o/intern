@@ -21,7 +21,7 @@ public class UserService {
   public SignUpResponseDto signUp(SignUpRequestDto requestDto){
     String username = requestDto.getUsername();
     String password = passwordEncoder.encode(requestDto.getPassword());
-    String nickname = requestDto.getPassword();
+    String nickname = requestDto.getNickname();
 
     //username 중복확인
     if (duplicatedUsername(username)){
@@ -34,8 +34,8 @@ public class UserService {
 
     User user = new User(
         username,
-        password,
-        nickname
+        nickname,
+        password
     );
     userRepository.save(user);
     return new SignUpResponseDto(user);
