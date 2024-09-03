@@ -39,6 +39,7 @@ public class User {
     this.nickname = nickname;
     this.password = password;
     this.authorities = UserAuthorities.ROLE_USER;
+    this.userStatusEnum = UserStatusEnum.ACTIVE_USER;
   }
 
   public void login(String username, String password){

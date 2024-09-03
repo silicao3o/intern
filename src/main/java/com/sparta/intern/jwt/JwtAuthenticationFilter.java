@@ -30,7 +30,7 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 
   public JwtAuthenticationFilter(JwtTokenHelper jwtTokenHelper) {
     this.jwtTokenHelper = jwtTokenHelper;
-    setFilterProcessesUrl("/users/login");
+    setFilterProcessesUrl("/sign");
   }
   @Override
   public Authentication attemptAuthentication(HttpServletRequest request,
