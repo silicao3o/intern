@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: ${DATASOURCE_URL}
-    username: ${DATASOURCE_USERNAME}
-    password: ${DATASOURCE_PASSWORD}
+    url: jdbc:mysql://localhost:3306/intern
+    username: root
+    password: skybmw!004
     driver-class-name: com.mysql.cj.jdbc.Driver
     application:
       name: intern

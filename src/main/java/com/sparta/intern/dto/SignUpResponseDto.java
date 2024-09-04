@@ -2,6 +2,7 @@ package com.sparta.intern.dto;
 
 import com.sparta.intern.entity.User;
 import com.sparta.intern.entity.UserAuthorities;
+import lombok.Builder;
 import lombok.Getter;
 
 @Getter
@@ -10,6 +11,7 @@ public class SignUpResponseDto {
   private String nickname;
   private UserAuthorities authorities;
 
+  @Builder
   public SignUpResponseDto(User user){
     this.username = user.getUsername();
     this.nickname = user.getNickname();
